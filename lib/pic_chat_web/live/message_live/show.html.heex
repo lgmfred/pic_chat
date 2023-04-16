@@ -6,6 +6,7 @@
       module={PicChatWeb.MessageLive.FormComponent}
       id={@message.id}
       title={@page_title}
+      uploads={@uploads}
       action={@live_action}
       message={@message}
       return_to={Routes.message_show_path(@socket, :show, @message)}
@@ -23,6 +24,11 @@
   <li>
     <strong>From:</strong>
     <%= @message.from %>
+  </li>
+
+  <li>
+    <strong>Picture:</strong>
+    <img alt={@message.picture} src={@message.picture} />
   </li>
 
 </ul>

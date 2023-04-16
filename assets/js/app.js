@@ -34,6 +34,16 @@ topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
 window.addEventListener("phx:page-loading-start", info => topbar.show())
 window.addEventListener("phx:page-loading-stop", info => topbar.hide())
 
+dragndrop = document.getElementById("drag-n-drop")
+
+dragndrop.ondragover = function (event) {
+    dragndrop.classList.add("dragover")
+}
+
+dragndrop.ondragleave = function (event) {
+    dragndrop.classList.remove("dragover")
+}
+
 // connect if there are any LiveViews on the page
 liveSocket.connect()
 
