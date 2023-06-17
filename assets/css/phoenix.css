@@ -87,6 +87,24 @@ header nav a {
   display: block;
 }
 
+/* File upload / drag an drop styling */
+.drag-n-drop {
+  background-color: lightgrey;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  padding: 10rem;
+  text-align: center;
+}
+
+.drag-n-drop:hover {
+  cursor: pointer;
+}
+
+.dragover {
+  opacity: 0.5;
+}
+
 @media (min-width: 40.0rem) { /* Small devices (landscape phones, 576px and up) */
   header section {
     flex-direction: row;
